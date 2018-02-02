@@ -35,7 +35,7 @@ Create an SVG instance by,
 
 `var svg = SVG('id');`
 
-This will make `svg` an SVG object with which you can draw and manipulate shapes,text and much more.
+This will make `svg` an SVG object with which you can draw and manipulate shapes, text and much more.
 
 ### Creating a Polygon
 
@@ -44,6 +44,6 @@ Polygons look good. Websites often have slanting/sloped designs that look fabulo
 `var polygon = svg.polygon([[top right][bottom right][][]..])`
 
 Tne `polygon()` method takes array of x,y coordinates in anti-clockwise fashion.
-You can also pass points in a comma (`,`) seperated string formate if you like.
+You can also pass points in a comma (`,`) seperated string format if you like.
 eg :- `"14,32,35,76,34,42,75,21..."`
 
