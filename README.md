@@ -47,3 +47,37 @@ Tne `polygon()` method takes array of x,y coordinates in anti-clockwise fashion.
 You can also pass points in a comma (`,`) seperated string format if you like.
 eg :- `"14,32,35,76,34,42,75,21..."`
 
+SVG.js also provides utility methods like `fill(color)`, `stroke(type)`, `animate(time)` that can be used to make your SVGs look more attractive and interactive.
+
+### SVG Texts
+
+SVG texts are not as flexible as they are in normal HTML. SVG can not automate text flowing due to its basic working structure hence, new lines are needed to be provided explicitly. Each line is wrapped within `<tspan>` tags which are used for formating the text. SVG.js provides methods by which you can format text just like you do for HTML text. Below are some ways in which you can create text nodes. 
+
+```javascript
+	
+	var textX = svg.text("hello text");
+	var textY = svg.text(function(add) {
+			add.tspan("SVG text").newLine()
+				.tspan("with a new line defined explicitly.");
+		})
+	var textZ = svg.text("New lines can also be defined by \n");
+	var textX1 = svg.plain("Simple text with no new lines.");
+
+		text.font({
+		  family:   'Helvetica'
+		, size:     144
+		, anchor:   'middle'
+		, leading:  '1.5em'
+		});
+```	
+
+Available properties for `font()` are:
+
+*leading (will do the same as calling the leading() method as setter)
+*anchor (will set the text-anchor attribute)
+*family (will set the font-family attribute)
+*size (will set the font-size attribute)
+*stretch (will set the font-stretch attribute)
+*style (will set the font-style attribute)
+*variant (will set the font-variant attribute)
+*weight (will set the font-weight attribute)
