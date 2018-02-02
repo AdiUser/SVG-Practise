@@ -6,12 +6,12 @@ Making friends with SVG.js and paper.js
 Lately I have been noticing a decrease in my personal growth, and it feels something, rather exactly like :point_right: :poop:.
 So to make me :smiley: again, I decided to learn these two libraries.
 
-	`<side_note>`
+  `<side_note>`
 
-		*I know that these two libraries are huge and it is not at all possible for me to learn everything immediately. 
-		So, I'll just focus on quick 'take-aways' i.e things that I think I might use in near future.*
+   *I know that these two libraries are huge and it is not at all possible for me to learn everything immediately. 
+   So, I'll just focus on quick 'take-aways' i.e things that I think I might use in near future.*
 
-	`</side_note>` 
+  `</side_note>` 
 
 **PS:** No promises tho, but I'll try to write what I learn. 
 
