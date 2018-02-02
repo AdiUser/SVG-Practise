@@ -12,8 +12,6 @@ Game ON :exclamation:
 
 `</self_note>`
 
----
-
 ## SVG.js**
 
 ### What is SVG?
