@@ -43,7 +43,7 @@ Polygons look good. Websites often have slanting/sloped designs that look fabulo
 
 `svg.polygon([[top right][bottom right][][]..])`
 
-polygon() takes array of x,y coordinates in anti-clockwise fashion.
+polygon() method takes array of x,y coordinates in anti-clockwise fashion.
 You can also pass points in a comma (`,`) seperated string formate if you like.
 
 eg :- `"14,32,35,76,34,42,75,21..."`
