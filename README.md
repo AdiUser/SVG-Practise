@@ -14,9 +14,9 @@ Game ON :exclamation:
 
 ---
 
-##SVG.js**
+## SVG.js**
 
-##What is SVG?
+### What is SVG?
 
 SVG or Scalable Vector Graphics are things that make "somethings" easy and wonderful.
 As the name suggests, they (automatically scale)<sup>[1]</sup> themseleves a/c to the viewport.
