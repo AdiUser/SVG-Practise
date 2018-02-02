@@ -1,0 +1,7 @@
+html, body {
+	margin: 0;
+}
+#svg-draw {
+	height: 500px;
+	width:100%;
+}
