@@ -51,7 +51,7 @@ SVG.js also provides utility methods like `fill(color)`, `stroke(type)`, `animat
 
 ### SVG Texts
 
-SVG texts are not as flexible as they are in normal HTML. SVG can not automate text flowing due to its basic working structure hence, new lines are needed to be provided explicitly. Each line is wrapped within `<tspan>` tags which are used for formating the text. SVG.js provides methods by which you can format text just like you do for HTML text. Below are some ways in which you can create text nodes. 
+SVG texts are not as flexible as they are in normal HTML. SVG can not automate text flowing due to its basic working structure hence, new lines are needed to be provided explicitly. Each line is wrapped within `<tspan>` tags which are used for formating the text. SVG.js provides methods by which you can format text just like you do for HTML. Below are some ways in which you can create text nodes. 
 
 ```javascript
 	
@@ -62,6 +62,7 @@ SVG texts are not as flexible as they are in normal HTML. SVG can not automate t
 		});
 	var textZ = svg.text("New lines can also be defined by \n");
 	var textX1 = svg.plain("Simple text with no new lines.");
+	
 	text.font({
 		  family:   'Helvetica'
 		, size:     144
