@@ -58,11 +58,10 @@ SVG texts are not as flexible as they are in normal HTML. SVG can not automate t
 	var textX = svg.text("hello text");
 	var textY = svg.text(function(add) {
 			add.tspan("SVG text").newLine()
-				.tspan("with a new line defined explicitly.");
-		})
+			   .tspan("with a new line defined explicitly.");
+			});
 	var textZ = svg.text("New lines can also be defined by \n");
 	var textX1 = svg.plain("Simple text with no new lines.");
-
 		text.font({
 		  family:   'Helvetica'
 		, size:     144
