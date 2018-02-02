@@ -59,10 +59,10 @@ SVG texts are not as flexible as they are in normal HTML. SVG can not automate t
 	var textY = svg.text(function(add) {
 			add.tspan("SVG text").newLine()
 			   .tspan("with a new line defined explicitly.");
-			});
+		});
 	var textZ = svg.text("New lines can also be defined by \n");
 	var textX1 = svg.plain("Simple text with no new lines.");
-		text.font({
+	text.font({
 		  family:   'Helvetica'
 		, size:     144
 		, anchor:   'middle'
@@ -72,12 +72,12 @@ SVG texts are not as flexible as they are in normal HTML. SVG can not automate t
 
 Available properties for `font()` are:
 
-* leading (will do the same as calling the leading() method as setter)
- * leading == line height
-* anchor (will set the text-anchor attribute)
-* family (will set the font-family attribute)
-* size (will set the font-size attribute)
-* stretch (will set the font-stretch attribute)
-* style (will set the font-style attribute)
-* variant (will set the font-variant attribute)
-* weight (will set the font-weight attribute)
+* `leading` (will do the same as calling the leading() method as setter)
+	* `leading` == `line-height`
+* `anchor` (will set the text-anchor attribute)
+* `family` (will set the font-family attribute)
+* `size` (will set the font-size attribute)
+* `stretch` (will set the font-stretch attribute)
+* `style` (will set the font-style attribute)
+* `variant` (will set the font-variant attribute)
+* `weight` (will set the font-weight attribute)
