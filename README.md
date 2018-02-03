@@ -122,10 +122,10 @@ You can load another image by using `load()` method. It takes the path of the im
 
 ```javascript
 	var img = svg.load('/path/to/image').loaded(function(imgL) {
-			var width = imglL.width;
-			var height = imgL.height;
+		var width = imglL.width;
+		var height = imgL.height;
 
-			this.size(width, height);
-		});
+		this.size(width, height);
+	});
 ``` 
 
