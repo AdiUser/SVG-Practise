@@ -104,7 +104,7 @@ The `build()` can be used to enable / disable build mode. With build mode disabl
 
 ### Images with SVG.js
 
-SVG.js provides a handy `image()` method that can be used to load images directly to your view. The `image()` method takes in the path to the image, it's width and its height. One interesting use of image method is using images as `fill` for things like rectangles and polygons. You can make a polygon and simply use it's `fill()` method to insert image inside it.
+SVG.js provides a handy `image()` method that can be used to load images directly to your view. The `image()` method takes in the path to the image, it's width and height. One interesting use of image method is using images as `fill` for things like rectangles and polygons. You can make a polygon and simply use it's `fill()` method to insert image inside it.
 
 ```javascript
 
@@ -116,9 +116,9 @@ SVG.js provides a handy `image()` method that can be used to load images directl
 
 #### image.load()
 
-You can load another images by using `load()` method. It takes the path of the image. 
+You can load another image by using `load()` method. It takes the path of the image. 
 
-**Note :**If you do not know the size of the loading image, SVG.js provides `loaded()` method that can be used for determining the image parameters.
+**Note :** If you do not know the size of the loading image, SVG.js provides `loaded()` method that can be used for determining the image parameters.
 
 ```javascript
 	var img = svg.load('/path/to/image').loaded(function(imgL) {
