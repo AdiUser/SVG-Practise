@@ -121,7 +121,7 @@ You can load another image by using `load()` method. It takes the path of the im
 **Note :** If you do not know the size of the loading image, SVG.js provides `loaded()` method that can be used for determining the image parameters.
 
 ```javascript
-	var img = svg.load('/path/to/image').loaded(function(imgL) {
+	var img = svg.image('/path/to/image').loaded(function(imgL) {
 		var width = imglL.width;
 		var height = imgL.height;
 
