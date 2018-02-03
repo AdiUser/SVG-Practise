@@ -43,7 +43,7 @@ Polygons look good. Websites often have slanting/sloped designs that look fabulo
 
 `var polygon = svg.polygon([[top right][bottom right][][]..])`
 
-Tne `polygon()` method takes array of x,y coordinates in anti-clockwise fashion.
+The `polygon()` method takes array of x,y coordinates in anti-clockwise fashion.
 You can also pass points in a comma (`,`) seperated string format if you like.
 eg :- `"14,32,35,76,34,42,75,21..."`
 
@@ -101,4 +101,31 @@ Note that the `leading()` method assumes that every first level tspan in a text 
 #### text.build()
 
 The `build()` can be used to enable / disable build mode. With build mode disabled, the `plain()` and `tspan()` methods will first call the `clear()` method before adding the new content. So when build mode is enabled, `plain()` and `tspan()` will append the new content to the existing content. When passing a block to the `text()` method, build mode is toggled automatically before and after the block is called. But in some cases it might be useful to be able to toggle it manually.
+
+### Images with SVG.js
+
+SVG.js provides a handy `image()` method that can be used to load images directly to your view. The `image()` method takes in the path to the image, it's width and its height. One interesting use of image method is using images as `fill` for things like rectangles and polygons. You can make a polygon and simply use it's `fill()` method to insert image inside it.
+
+```javascript
+
+	var poly = svg.polygon([[0, 0], [0, 325], [width, 500], [width, 0]]);
+	var image = svg.image('/path/to/image');
+	poly.fill(image);
+
+```
+
+#### image.load()
+
+You can load another images by using `load()` method. It takes the path of the image. 
+
+**Note :**If you do not know the size of the loading image, SVG.js provides `loaded()` method that can be used for determining the image parameters.
+
+```javascript
+	var img = svg.load('/path/to/image').loaded(function(imgL) {
+			var width = imglL.width;
+			var height = imgL.height;
+
+			this.size(width, height);
+		});
+``` 
 
