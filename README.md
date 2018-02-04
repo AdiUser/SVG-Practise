@@ -129,3 +129,20 @@ You can load another image by using `load()` method. It takes the path of the im
 	});
 ``` 
 
+#### text.path()
+
+A nice feature in svg is the ability to run text along a path:
+
+```javascript
+var text = draw.text(function(add) {
+  add.tspan('We go ');
+  add.tspan('up').fill('#f09').dy(-40);
+  add.tspan(', then we go down, then up again').dy(40);
+});
+
+var path = 'M 100 200 C 200 100 300 0 400 100 C 500 200 600 300 700 200 C 800 100 900 100 900 100'
+
+text.path(path).font({ size: 42.5, family: 'Verdana' })
+```
+
+When calling the `path()` method on a text element, the text element is mutated into an intermediate between a text and a path element. From that point on the text element will also feature a `plot()` method to update the path.
