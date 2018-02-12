@@ -134,7 +134,7 @@ You can load another image by using `load()` method. It takes the path of the im
 A nice feature in svg is the ability to run text along a path:
 
 ```javascript
-var text = draw.text(function(add) {
+var text = svg.text(function(add) {
   add.tspan('We go ');
   add.tspan('up').fill('#f09').dy(-40);
   add.tspan(', then we go down, then up again').dy(40);
@@ -146,3 +146,21 @@ text.path(path).font({ size: 42.5, family: 'Verdana' })
 ```
 
 When calling the `path()` method on a text element, the text element is mutated into an intermediate between a text and a path element. From that point on the text element will also feature a `plot()` method to update the path.
+
+### SVG Gradients
+
+Gradients can be handy in some situations. SVG.js has methods that can help in building custom gradients. SVG gradients are fillable, meaning you can set the `fill()` for any shape with a gradient you build. 
+
+```javascript
+var grad = svg.gradient('linear', function(stop) {
+			stop.at(.24, '#000', .5)
+			stop.at(.36, '#fdc')
+			stop.at(.96, '#fff')
+		})
+var rect =  svg.rect(200, 200).move(90, 400).fill(grad)
+```	
+
+The primary way of creating a gradient is shown above. The `gradient()` method accepts two parameters ('linear'|'radical') and a function an argument (an object) that is used to define gradient boundaries. You can define the gradient limits/boundaries by using the `at()` method of this argument.    The `at()` takes 3 parameters, a float value b/w 0 and 1, color and opacity value. 
+**Note:**
+* Opacity value is optional.
+* The float value b/w 0 and 1 can also be expressed in percentages. 
