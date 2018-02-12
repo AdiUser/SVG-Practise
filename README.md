@@ -160,8 +160,27 @@ var grad = svg.gradient('linear', function(stop) {
 var rect =  svg.rect(200, 200).move(90, 400).fill(grad)
 ```	
 
-The primary way of creating a gradient is shown above. The `gradient()` method accepts two parameters ('linear'|'radical') and a function an argument (an object) that is used to define gradient boundaries. You can define the gradient limits/boundaries by using the `at()` method of this argument.    The `at()` takes 3 parameters, a float value b/w 0 and 1, color and opacity value. 
+The primary way of creating a gradient is shown above. The `gradient()` method accepts two parameters ('linear'|'radical') and a function an argument (an object) that is used to define gradient boundaries. You can define the gradient limits/boundaries by using the `at()` method of this argument. The `at()` method takes 3 parameters, a float value b/w 0 and 1, color and opacity value. 
 
 **Note:**
 * Opacity value is optional.
 * The float value b/w 0 and 1 can also be expressed in percentages. 
+
+### SVG Masks
+
+Masks are a handy tool for creating layered graphics. The basic concept behind masks(a/c to me) is - suppose you have a container and many layers that you want to stack on top of each other. The container acts as a container(literally) here. It will contain all those layers in inside it. The colour of this container controls the opacity of the layers. The first layer in the mask gets the bottom-most position while the last layer gets stacked at the top. Example -
+
+```javascript
+//draw a container 
+var rect = draw.rect(200, 200).fill('#f09')
+//get a msk instance
+var mask = draw.mask();
+	
+	// add your layers to the mask
+	mask.add(draw.circle(75, 75).fill('#fff').radius(20))
+	mask.add(draw.circle(100,100).fill('#ccd').radius(15))
+	mask.add(draw.circle(40, 40).fill('#3c3').radius(20))
+	
+	//finally, add the mask to the container
+	rect.maskWith(mask)
+```
