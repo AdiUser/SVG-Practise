@@ -161,6 +161,7 @@ var rect =  svg.rect(200, 200).move(90, 400).fill(grad)
 ```	
 
 The primary way of creating a gradient is shown above. The `gradient()` method accepts two parameters ('linear'|'radical') and a function an argument (an object) that is used to define gradient boundaries. You can define the gradient limits/boundaries by using the `at()` method of this argument.    The `at()` takes 3 parameters, a float value b/w 0 and 1, color and opacity value. 
+
 **Note:**
 * Opacity value is optional.
 * The float value b/w 0 and 1 can also be expressed in percentages. 
