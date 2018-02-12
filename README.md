@@ -164,7 +164,7 @@ The primary way of creating a gradient is shown above. The `gradient()` method a
 
 **Note:**
 * Opacity value is optional.
-* The float value b/w 0 and 1 can also be expressed in percentages. 
+* The float value b/w 0 and 1 can also be expressed in percentage. 
 
 ### SVG Masks
 
@@ -173,7 +173,7 @@ Masks are a handy tool for creating layered graphics. The basic concept behind m
 ```javascript
 //draw a container 
 var rect = draw.rect(200, 200).fill('#f09')
-//get a msk instance
+//get a mask instance
 var mask = draw.mask();
 	
 	// add your layers to the mask
