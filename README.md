@@ -184,3 +184,24 @@ var mask = draw.mask();
 	//finally, add the mask to the container
 	rect.maskWith(mask)
 ```
+
+### SVG ClipPath
+
+Clipping elements works exactly the same as masking elements. The only difference is that clipped elements will adopt the geometry of the clipping element. Therefore events are only triggered when entering the clipping element whereas with masks the masked element triggers the event. Another difference is that masks can define opacity with their fill colour and clipPaths can't.
+
+```javascript
+// get the container
+var rect = draw.rect(200, 200).fill('#f09')
+//get a clip instance
+var clip = draw.clip();
+	
+	// add your layers to the mask
+	clip.add(draw.circle(75, 75).fill('#fff').radius(20))
+	clip.add(draw.circle(100,100).fill('#ccd').radius(15))
+	clip.add(draw.circle(40, 40).fill('#3c3').radius(20))
+	
+	//finally, add the mask to the container
+	rect.clipWith(mask)
+```
+
+### SVG Marker
