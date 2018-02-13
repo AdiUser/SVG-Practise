@@ -205,3 +205,57 @@ var clip = draw.clip();
 ```
 
 ### SVG Marker
+
+Markers can be added to every individual point of a line, polyline, polygon and path. There are three types of markers: start, mid and end. Where start represents the first point, end the last and mid every point in between.
+
+```javascript
+var path = draw.path('M0 0 A50 50 0 0 1 50 50 A50 50 0 0 0 100 100')
+
+path.fill('none').move(20, 20).stroke({ width: 1, color: '#ccc' })
+
+path.marker('start', 10, 10, function(add) {
+  add.circle(10).fill('#f06')
+})
+path.marker('mid', 10, 10, function(add) {
+  add.rect(5, 10).cx(5).fill('#ccc')
+})
+path.marker('end', 20, 20, function(add) {
+  add.circle(6).center(4, 5)
+  add.circle(6).center(4, 15)
+  add.circle(6).center(12, 10)
+
+  this.fill('#0f9')
+})
+```
+
+The `marker()` method can be used in three ways. Firstly, a marker can be created on any container element (e.g. svg, nested, group, ...). This is useful if you plan to reuse the marker many times, so it will create a marker in the defs but not show it yet:
+
+```javascript
+var marker = draw.marker(10, 10, function(add) {
+  add.rect(10, 10)
+})
+```
+
+Secondly a marker can be created and applied directly on its target element:
+
+```javascript
+path.marker('start', 10, 10, function(add) {
+  add.circle(10).fill('#f06')
+})
+```
+
+This will create a marker in the defs and apply it directly. Note that the first argument defines the position of the marker and that there are four arguments as opposed to three with the first example.
+
+Lastly, if a marker is created for reuse on a container element, it can be applied directly to the target element:
+
+```javascript
+path.marker('mid', marker)
+```
+
+Finally, to get a marker instance from the target element reference:
+
+```javascript
+path.reference('marker-end')
+```
+
+*from - http://svgjs.com/elements/*
